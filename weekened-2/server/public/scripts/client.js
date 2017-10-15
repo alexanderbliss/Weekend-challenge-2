@@ -39,39 +39,43 @@ function getAnswer(){
         url: '/result'
     }).done(function(responce){
         console.log(responce);
-        $('.result').append('<h1>' + responce + '</h1>');
-        $('.vid').append('<img>' + "src='url' alt='some_text' src='http://38.media.tumblr.com/3508af3210360f73736fc00e825e1237/tumblr_nuab2dvQCb1ruodr3o2_250.gif'" + '</img>');
+        $('.result').append('<h1>' + $('#num1').val() + math  + $('#num2').val()  + ' = ' + responce + '</h1>');
+        $('.vid').append('<img src="url" alt="some_text" src="http://38.media.tumblr.com/3508af3210360f73736fc00e825e1237/tumblr_nuab2dvQCb1ruodr3o2_250.gif" >');
     }).fail(function(message){
         console.log(message);
     })
 
 }
-
+// function appendHistory(){
+//     if(math = 'add'){
+//         math = '+'
+//     }
+// }
 var math = ('');
 function add(){
     //addition function
-    math = ('add');
+    math = ('+');
     serverSend();
-console.log('add');
+console.log('+');
 }
 function subtract() {
     //subtrack function
-    math = ('subtract');
+    math = ('-');
     serverSend();
-console.log('subtract');
+console.log('-');
 }
 function multiply() {
     //multiply function
-    math = ('multiply');
+    math = ('*');
     serverSend();
     
-console.log('multiply');
+console.log('*');
 }
 function divide() {
     //divide function
-    math = ('divide');
+    math = ('/');
     serverSend();
-console.log('divide');
+console.log('/');
 }
 function clear() {
     //clear function

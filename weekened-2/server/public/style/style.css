@@ -1,3 +1,20 @@
 body{
-    background-color: grey
+    background-color: grey;
+    justify-content: center;
+}
+
+.buttons{
+    text-align: center
+}
+
+#add{
+    height: 20px;
+    border: 2px border-style red,
+}
+
+h1{
+    text-align: center
+}
+.inputs{
+    text-align: center
 }

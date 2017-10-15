@@ -28,13 +28,13 @@ var result =[];
 
     for(var i=0; i<data.length; i+=1)
 
-    if (data[0]=== 'add'){
+    if (data[0]=== '+'){
     return result = [data[1]+data[2]];
-    }else if (data[0] === 'subtract'){
+    }else if (data[0] === '-'){
         return result =[data[1]-data[2]];
-    }else if (data[0]=== 'multiply'){
+    }else if (data[0]=== '*'){
         return result = [data[1] * data[2]];
-    } else if(data[0]==='divide'){
+    } else if(data[0]==='/'){
         return result = [data[1]/data[2]];
 
     }
