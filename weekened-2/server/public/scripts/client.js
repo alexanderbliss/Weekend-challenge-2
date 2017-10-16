@@ -12,6 +12,9 @@ $('.buttons').on('click', '#subtract', subtract );
 $('.buttons').on('click', '#multiply', multiply );
 $('.buttons').on('click', '#divide', divide );
 $('.buttons').on('click', '#clear', clear );
+$('.hardMode').on('click', '#fourteen', fourteen );
+$('.hardMode').on('click', '#equals', equals );
+$('.hardMode').on('click', '#twelve', twelve );
 }
 function serverSend(){
     console.log ('click')
@@ -40,7 +43,8 @@ function getAnswer(){
     }).done(function(responce){
         console.log(responce);
         $('.result').append('<h1>' + $('#num1').val() + math  + $('#num2').val()  + ' = ' + responce + '</h1>');
-        $('.vid').append('<img src="url" alt="some_text" src="http://38.media.tumblr.com/3508af3210360f73736fc00e825e1237/tumblr_nuab2dvQCb1ruodr3o2_250.gif" >');
+        // $('.vid').append('<img src="url" alt="some_text" src="http://38.media.tumblr.com/3508af3210360f73736fc00e825e1237/tumblr_nuab2dvQCb1ruodr3o2_250.gif" >');
+        //this append vid dosent work.
     }).fail(function(message){
         console.log(message);
     })
@@ -82,3 +86,18 @@ function clear() {
     location.reload();
 console.log('clear');
 } 
+
+
+//hard mode functions
+
+function twelve(){
+    input1 = 12
+    console.log('12')
+}   
+function fourteen(){
+    input2 = 14
+    console.log('14');
+}
+function equals(){
+    serverSend();
+}
