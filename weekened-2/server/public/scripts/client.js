@@ -30,6 +30,7 @@ function serverSend(){
         data: {mathFunction: math ,input1: input1, input2:input2}
     }).done(function(response){
         getAnswer()
+        getHistory()
         console.log('sent numbers POST', response);
     }).fail(function(message){
         console.log('error!',message);
@@ -49,6 +50,15 @@ function getAnswer(){
         console.log(message);
     })
 
+}
+function getHistory() {
+    $.ajax({
+        method: 'GET',
+        url: '/history'
+    }).done(function (responce) {
+        console.log(responce);
+
+    })
 }
 // function appendHistory(){
 //     if(math = 'add'){
